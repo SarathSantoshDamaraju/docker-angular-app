@@ -1,0 +1,55 @@
+<!-- nav bar -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    EMS
+  </a>
+  <button class="btn btn-light btn" (click)="handleLogout()">Logout</button>
+</nav>
+
+<!-- app body -->
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+      <button class="btn btn-primary">Insert</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-warning">Update</button>
+    </div>
+    <div class="col">
+      <button class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col">
+      <h2>Employees List</h2>
+      <hr/>
+      <table class="table table-bordered mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="1">
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>QA</td>
+          </tr>
+          <tr id="2">
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Developer</td>
+          </tr>
+          <tr id=3>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>Tutor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
