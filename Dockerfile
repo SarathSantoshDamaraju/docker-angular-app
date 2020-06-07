@@ -1,20 +1,15 @@
 # STEP - 1
 FROM node:12.16.3 as node
+RUN mkdir -p /app
 # STEP - 2
 WORKDIR /app
 # STEP - 3
-COPY package.json ./
+COPY package*.json /app/
 # STEP - 4
 RUN npm install
 # STEP - 5
-COPY . .
+COPY . /app/
 # STEP - 6
-RUN npm run build
+EXPOSE 4200
 # STEP - 7
-FROM nginx:1.13.12-alpine
-# STEP - 8
-COPY --from=node /app/dist/employee-generator /usr/share/nginx/html
-# STEP - 9
-Expose 80
-# STEP - 10
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
